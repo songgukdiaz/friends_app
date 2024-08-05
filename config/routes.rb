@@ -3,10 +3,6 @@ Rails.application.routes.draw do
   root "friends#index"
   
   get '/about', to: 'friends#about'
+  
   resources :friends
-
-
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end
