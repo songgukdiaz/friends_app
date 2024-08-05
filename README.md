@@ -5,8 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
+* Ruby version 3.3.4
+* sqlite version 3.46.0 #path added manually in environment settings
+* rails 7.1.3.4
+  
 * System dependencies
 
 * Configuration
