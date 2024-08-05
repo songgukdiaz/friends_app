@@ -1,25 +1,31 @@
-<h1>Welcome to Friends app!</h1>
+<h1>Welcome to Friends!</h1>
+<br>
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Email</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
 
-
-<table>
-	<tr>
-    	<th>First Name</th>
-    	<th>Last Name</th>
-    	<th>Age</th>
-    	<th>Email</th>
-    	<th></th>
-    	<th></th>
-  	</tr>
+    </tr>
+  </thead>
+  <tbody>
   	<% @friends.each do |friend|%>
-  	<tr>
-    	<td><%= friend.first_name %></td>
-    	<td><%= friend.last_name %></td>
-    	<td><%= friend.age %></td>
-    	<td><%= friend.email %></td>
-    	<td><%= link_to "details", friend %></td>
-    	<td><%= link_to "edit", edit_friend_path(friend)%></td>
-  	</tr>
-	<% end %>	
+    <tr>
+      <th scope="row"><%= friend.id %></th>
+      <td><%= friend.first_name %></td>
+      <td><%= friend.last_name %></td>
+      <td><%= friend.age %></td>
+      <td><%= friend.email %></td>
+      <td><%= link_to "details", friend, class:"btn btn-secondary"%></td>
+      <td><%= link_to "edit", edit_friend_path(friend), class:"btn btn-secondary" %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <%= link_to "new friend", new_friend_path%>

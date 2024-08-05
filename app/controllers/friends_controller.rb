@@ -42,6 +42,9 @@ class FriendsController < ApplicationController
     redirect_to root_path, status: :see_other
   end
 
+  def about
+  end
+
 
   private
     def friend_params
