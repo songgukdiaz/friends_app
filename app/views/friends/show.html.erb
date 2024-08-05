@@ -1,0 +1,11 @@
+<h><%= @friend.first_name %></h>
+<h><%= @friend.last_name %></h>
+<h><%= @friend.age %></h>
+<h><%= @friend.email %></h>
+<br>
+
+<%=link_to "back", friends_path%>
+<br>
+<br>
+
+<%= link_to "Destroy", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
