@@ -2,6 +2,14 @@
 <html>
   <head>
     <title>Friends</title>
+    <style>
+        .content-wrapper {
+            padding: 20px; /* Adds space inside the div */
+            margin: 5px;  /* Adds space outside the div */
+            
+            
+        }
+    </style>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,9 +17,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
-
+  
   <body>
     <%= render "layouts/header" %>
+    <div class="content-wrapper">
     <%= yield %>
+    </div>
   </body>
 </html>

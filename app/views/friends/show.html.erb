@@ -1,11 +1,13 @@
-<h><%= @friend.first_name %></h>
-<h><%= @friend.last_name %></h>
-<h><%= @friend.age %></h>
-<h><%= @friend.email %></h>
+<div class="text-bg-light p-3">
+	<h4>First Name: <%= @friend.first_name %></h4>
+	<h4>Last Name: <%= @friend.last_name %></h4> 
+	<h4>Age: <%= @friend.age %></h4>
+	<h4>Email: <%= @friend.email %></h4>
+</div>
 <br>
 
-<%=link_to "back", friends_path%>
+<%=link_to "back", friends_path, class: "btn btn-secondary"%>
 <br>
 <br>
 
-<%= link_to "Destroy", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Destroy", friend_path(@friend), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
